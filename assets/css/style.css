@@ -7,16 +7,16 @@
     --dark-graphite: #2d3436;
     --electric-violet: #a29bfe;
     --peach-gradient: linear-gradient(135deg, #fab1a0, #ff7675);
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-bg: rgba(0, 0, 0, 0.05);
+    --glass-border: rgba(0, 0, 0, 0.1);
 
-    /* Theme Defaults (Light) */
+    /* Theme Defaults (Light by default) */
     --bg-color: #ffffff;
     --text-color: #2d3436;
     --card-bg: #ffffff;
     --secondary-bg: #f9f9f9;
     --navbar-bg: rgba(255, 255, 255, 0.95);
-    --footer-bg: #111111;
+    --footer-bg: #ffffff;
 
     /* Spacing & Borders */
     --radius-sm: 8px;
@@ -31,8 +31,9 @@
     --card-bg: #111111;
     --secondary-bg: #050505;
     --navbar-bg: rgba(0, 0, 0, 0.95);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --footer-bg: #111111;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -279,10 +280,21 @@ input:checked+.slider:before {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border: 1px solid var(--glass-border);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
     transform: translateY(-10px);
+}
+
+@media (min-width: 1025px) {
+    .card-title {
+        font-size: 1.05rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
 .portfolio-grid {
@@ -434,6 +446,31 @@ input:checked+.slider:before {
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
+    }
+
+    .tablet-center > div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .tablet-center p {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tablet-center ul {
+        display: inline-block;
+        text-align: left;
+        list-style-position: inside;
+        padding-left: 0 !important;
+    }
+
+    .tablet-center ul li {
+        text-align: center;
+        margin-bottom: 10px;
     }
 }
 
