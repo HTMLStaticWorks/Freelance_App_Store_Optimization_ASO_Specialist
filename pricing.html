@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | ASO Elite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .pricing-card {
+            border: 2px solid transparent;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .pricing-card.featured {
+            border-color: var(--primary-purple);
+            transform: scale(1.05);
+            z-index: 10;
+            background: #fff;
+        }
+        .pricing-card h2 {
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+        .pricing-card ul {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .pricing-card li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .pricing-card li::before {
+            content: "✓";
+            color: var(--primary-purple);
+            font-weight: bold;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none;">
+                <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 40px; border-radius: 8px;">
+                <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home 1</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html" class="active">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions flex" style="gap: 15px; align-items: center;">
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Dark</span>
+                </div>
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="rtl-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>RTL</span>
+                </div>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+            <button class="mobile-menu-btn" style="display: none;">☰</button>
+        </div>
+    </header>
+
+    <!-- 1. Pricing Hero -->
+    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition); padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 4rem; margin-bottom: 20px;">Invest in Your <span style="color: var(--neon-coral);">Growth</span></h1>
+            <p style="font-size: 1.2rem; opacity: 0.7; max-width: 600px; margin: 0 auto;">Transparent pricing for apps at every stage of their lifecycle.</p>
+        </div>
+    </section>
+
+    <!-- 2. Pricing Tables -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: flex-start;">
+                <div class="card pricing-card">
+                    <h3>Starter</h3>
+                    <p style="opacity: 0.6;">For new apps</p>
+                    <h2>$499<span style="font-size: 1rem; opacity: 0.5;">/mo</span></h2>
+                    <ul>
+                        <li>10 Primary Keywords</li>
+                        <li>Basic Store Audit</li>
+                        <li>1 Localized Market</li>
+                        <li>Monthly Report</li>
+                    </ul>
+                    <a href="register.html" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="card pricing-card featured">
+                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-purple); color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">MOST POPULAR</span>
+                    <h3>Growth</h3>
+                    <p style="opacity: 0.6;">For scaling apps</p>
+                    <h2>$1,299<span style="font-size: 1rem; opacity: 0.5;">/mo</span></h2>
+                    <ul>
+                        <li>50 Primary Keywords</li>
+                        <li>Full Visual Audit</li>
+                        <li>5 Localized Markets</li>
+                        <li>Weekly Rank Tracking</li>
+                        <li>Competitor Analysis</li>
+                    </ul>
+                    <a href="register.html" class="btn btn-primary">Choose Growth</a>
+                </div>
+                <div class="card pricing-card">
+                    <h3>Professional</h3>
+                    <p style="opacity: 0.6;">For established apps</p>
+                    <h2>$2,499<span style="font-size: 1rem; opacity: 0.5;">/mo</span></h2>
+                    <ul>
+                        <li>150 Keywords</li>
+                        <li>A/B Testing Managed</li>
+                        <li>Unlimited Localizations</li>
+                        <li>API Access</li>
+                        <li>Dedicated Manager</li>
+                    </ul>
+                    <a href="register.html" class="btn btn-outline">Go Pro</a>
+                </div>
+                <div class="card pricing-card">
+                    <h3>Elite</h3>
+                    <p style="opacity: 0.6;">For enterprise</p>
+                    <h2>Custom</h2>
+                    <ul style="margin-top: 20px;">
+                        <li>Everything in Pro</li>
+                        <li>24/7 Priority Support</li>
+                        <li>Custom Data Pipeline</li>
+                        <li>On-site Consulting</li>
+                        <li>Performance Guarantee</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FAQ Section -->
+    <section class="section-padding" style="background: var(--secondary-bg); transition: var(--transition);">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h4 style="margin-bottom: 10px;">How long does it take to see results?</h4>
+                <p style="opacity: 0.7;">Most apps see a shift in keyword rankings within 14-21 days of implementation. Organic install growth typically follows shortly after.</p>
+            </div>
+            <div class="faq-item">
+                <h4 style="margin-bottom: 10px;">Do you handle the store uploads?</h4>
+                <p style="opacity: 0.7;">For our Growth and Professional plans, we can provide direct implementation support or guide your team through the upload process.</p>
+            </div>
+            <div class="faq-item">
+                <h4 style="margin-bottom: 10px;">Can I cancel my plan at any time?</h4>
+                <p style="opacity: 0.7;">Yes, our monthly plans are flexible with no long-term contracts. Annual plans are also available for a 20% discount.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Enterprise Custom Solutions -->
+    <section class="section-padding" style="background: var(--peach-gradient); color: white;">
+        <div class="container grid" style="grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center;">
+            <div>
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Need a Tailored Solution?</h2>
+                <p style="opacity: 0.8; font-size: 1.1rem;">We work with major app publishers to create custom growth engines that integrate directly with their internal data stacks.</p>
+            </div>
+            <div style="text-align: right;">
+                <a href="contact.html" class="btn btn-primary" style="padding: 20px 40px;">Speak to an Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Trust Badges -->
+    <section class="section-padding">
+        <div class="container" style="text-align: center;">
+            <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.4; margin-bottom: 40px;">Trusted by Industry Leaders</p>
+            <div class="flex" style="justify-content: center; gap: 60px; opacity: 0.5; filter: grayscale(1);">
+                <span style="font-size: 1.5rem; font-weight: 800;">TECHCORP</span>
+                <span style="font-size: 1.5rem; font-weight: 800;">APPGENIUS</span>
+                <span style="font-size: 1.5rem; font-weight: 800;">VITALITY</span>
+                <span style="font-size: 1.5rem; font-weight: 800;">STREAMLY</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-padding" style="background: #111; color: white;">
+        <div class="container" style="text-align: center; opacity: 0.5;">
+            <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details | ASO Elite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .article-content p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+        }
+        .article-content h2 {
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+        .article-content blockquote {
+            border-left: 5px solid var(--primary-purple);
+            padding-left: 30px;
+            margin: 40px 0;
+            font-style: italic;
+            font-size: 1.4rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none;">
+                <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 40px; border-radius: 8px;">
+                <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home 1</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions flex" style="gap: 15px; align-items: center;">
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Dark</span>
+                </div>
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="rtl-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>RTL</span>
+                </div>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+            <button class="mobile-menu-btn" style="display: none;">☰</button>
+        </div>
+    </header>
+
+    <!-- 1. Article Header -->
+    <section class="section-padding" style="padding-top: 150px; background: #f4f7fe;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <a href="blog.html" style="color: var(--primary-purple); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">← Back to Blog</a>
+            <h1 style="font-size: 3.5rem; margin-top: 20px; margin-bottom: 30px;">The 2026 App Store Algorithm Shift: What You Need to Know</h1>
+            <div class="flex" style="justify-content: center; align-items: center; gap: 15px;">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" style="width: 50px; height: 50px; border-radius: 50%;">
+                <div style="text-align: left;">
+                    <p style="margin: 0; font-weight: 700;">John Elite</p>
+                    <p style="margin: 0; font-size: 0.8rem; opacity: 0.6;">Published May 12, 2026 • 8 min read</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Article Content -->
+    <section class="section-padding">
+        <div class="container" style="max-width: 800px;">
+            <div class="article-content">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Algorithm" style="width: 100%; border-radius: 30px; margin-bottom: 50px;">
+                <p>The landscape of mobile discovery is changing faster than ever. As we move further into 2026, Apple and Google are increasingly prioritizing "user intent" over simple keyword matching. This shift has massive implications for how we approach App Store Optimization.</p>
+                
+                <h2>The Rise of Semantic Search</h2>
+                <p>In previous years, simply including your target keyword in the title was enough to signal relevance. Today, the algorithm analyzes the context of your entire store listing. If you rank for "fitness tracker" but your screenshots focus entirely on "sleep sounds," you'll likely see a ranking penalty.</p>
+                
+                <blockquote>
+                    "Relevance is no longer just about matching words; it's about matching expectations."
+                </blockquote>
+
+                <h2>Visual Relevance Scoring</h2>
+                <p>One of the most significant updates is the inclusion of visual analysis in ranking. The App Store algorithm now "reads" your screenshots using machine learning to verify that they accurately represent the app's functionality described in the metadata.</p>
+                
+                <p>This means that generic stock images are no longer just bad for conversion—they're bad for rankings too. Custom, high-fidelity UI previews are now a mandatory part of any successful ASO strategy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Author Bio -->
+    <section class="section-padding" style="background: var(--secondary-bg); transition: var(--transition);">
+        <div class="container" style="max-width: 800px;">
+            <div class="card flex" style="gap: 30px; align-items: center; padding: 40px;">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" style="width: 120px; height: 120px; border-radius: 50%;">
+                <div>
+                    <h3>About John Elite</h3>
+                    <p style="font-size: 0.95rem; opacity: 0.7; margin-top: 10px;">John is the founder of ASO Elite and has over a decade of experience in digital marketing. He has helped over 500 apps reach the Top 10 rankings across various categories.</p>
+                    <div class="flex" style="gap: 15px; margin-top: 20px;">
+                        <a href="#" style="color: var(--primary-purple); font-weight: bold;">Follow on Twitter</a>
+                        <a href="#" style="color: var(--primary-purple); font-weight: bold;">Connect on LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Related Posts (4 cards) -->
+    <section class="section-padding">
+        <div class="container">
+            <h3 style="margin-bottom: 40px; text-align: center;">You Might Also Like</h3>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 25px;">
+                <div class="card" style="padding: 20px;">
+                    <h4 style="font-size: 1rem;">Screenshot Psychology</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">How to use color to drive clicks.</p>
+                </div>
+                <div class="card" style="padding: 20px;">
+                    <h4 style="font-size: 1rem;">Localization Guide</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Entering the Asian market.</p>
+                </div>
+                <div class="card" style="padding: 20px;">
+                    <h4 style="font-size: 1rem;">CPI vs Organic</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Balancing paid and free growth.</p>
+                </div>
+                <div class="card" style="padding: 20px;">
+                    <h4 style="font-size: 1rem;">Store Video Tips</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 10px;">Keep users watching longer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Feedback CTA -->
+    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition); text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Was this helpful?</h2>
+            <p style="opacity: 0.7; margin-bottom: 30px;">Share your thoughts with us on social media.</p>
+            <div class="flex" style="justify-content: center; gap: 20px;">
+                <a href="#" class="btn btn-primary">Share on Twitter</a>
+                <a href="#" class="btn btn-outline" style="color: white; border-color: white;">Join Discussion</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-padding" style="background: #111; color: white;">
+        <div class="container" style="text-align: center; opacity: 0.5;">
+            <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

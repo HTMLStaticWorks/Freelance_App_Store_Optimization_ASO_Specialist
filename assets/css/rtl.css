@@ -1,0 +1,49 @@
+/* RTL Support Styles */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-links {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .flex {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .grid {
+    direction: rtl;
+}
+
+[dir="rtl"] .nav-actions {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .btn {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+[dir="rtl"] .logo {
+    margin-left: 30px;
+}
+
+[dir="rtl"] .sidebar {
+    border-right: none;
+    border-left: 1px solid #e0e0e0;
+}
+
+[dir="rtl"] .side-nav a {
+    text-align: right;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .pricing-card li::before {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+[dir="rtl"] th {
+    text-align: right;
+}

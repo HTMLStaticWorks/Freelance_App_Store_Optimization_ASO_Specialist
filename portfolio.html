@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | ASO Elite Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none;">
+                <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 40px; border-radius: 8px;">
+                <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home 1</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions flex" style="gap: 15px; align-items: center;">
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Dark</span>
+                </div>
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="rtl-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>RTL</span>
+                </div>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+            <button class="mobile-menu-btn" style="display: none;">☰</button>
+        </div>
+    </header>
+
+    <!-- 1. Portfolio Hero -->
+    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition); padding-top: 150px; text-align: center;">
+        <div class="container">
+            <h1 style="font-size: 4rem; margin-bottom: 20px;">Proof in the <span style="color: var(--neon-coral);">Performance</span></h1>
+            <p style="font-size: 1.2rem; opacity: 0.7; max-width: 700px; margin: 0 auto;">A collection of apps we've scaled from obscurity to the top of the charts.</p>
+        </div>
+    </section>
+
+    <!-- 2. Success Gallery (4 large cards) -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 40px;">
+                <div class="card" style="padding: 0; overflow: hidden; border-radius: 30px;">
+                    <img src="assets/images/dashboard_mockup.png" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div style="padding: 40px;">
+                        <span style="color: var(--primary-purple); font-weight: 700;">FINTECH</span>
+                        <h3 style="font-size: 2rem; margin-top: 10px; margin-bottom: 20px;">Spendly: Budget Manager</h3>
+                        <p style="opacity: 0.7; margin-bottom: 30px;">We increased organic visibility by 450% and secured #1 ranking for 'Personal Finance' in the UK market.</p>
+                        <div class="flex" style="gap: 20px;">
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">+320%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">Downloads</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">#1</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">Main Keyword</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="padding: 0; overflow: hidden; border-radius: 30px;">
+                    <img src="assets/images/screenshots_mockup.png" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div style="padding: 40px;">
+                        <span style="color: var(--primary-purple); font-weight: 700;">HEALTH & FITNESS</span>
+                        <h3 style="font-size: 2rem; margin-top: 10px; margin-bottom: 20px;">FitTrack: AI Coach</h3>
+                        <p style="opacity: 0.7; margin-bottom: 30px;">Redesigned store assets and localized for 12 languages, resulting in a global revenue boost of 210%.</p>
+                        <div class="flex" style="gap: 20px;">
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">+210%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">Revenue</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">12</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">New Markets</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="padding: 0; overflow: hidden; border-radius: 30px;">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div style="padding: 40px;">
+                        <span style="color: var(--primary-purple); font-weight: 700;">GAMING</span>
+                        <h3 style="font-size: 2rem; margin-top: 10px; margin-bottom: 20px;">QuestMaster: RPG</h3>
+                        <p style="opacity: 0.7; margin-bottom: 30px;">Optimized preview videos and metadata for high-conversion keywords, cutting CPI by 65%.</p>
+                        <div class="flex" style="gap: 20px;">
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">-65%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">CPI Cost</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">4.8★</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">Store Rating</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="padding: 0; overflow: hidden; border-radius: 30px;">
+                    <img src="https://images.unsplash.com/photo-1542744094-24638eff58bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" style="width: 100%; height: 350px; object-fit: cover;">
+                    <div style="padding: 40px;">
+                        <span style="color: var(--primary-purple); font-weight: 700;">E-COMMERCE</span>
+                        <h3 style="font-size: 2rem; margin-top: 10px; margin-bottom: 20px;">ShopSwift: Local</h3>
+                        <p style="opacity: 0.7; margin-bottom: 30px;">Strategic A/B testing of screenshots led to a 14.5% increase in conversion rate across iOS and Android.</p>
+                        <div class="flex" style="gap: 20px;">
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">+14.5%</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">CVR Boost</p>
+                            </div>
+                            <div style="text-align: center;">
+                                <h4 style="color: var(--neon-coral);">10M+</h4>
+                                <p style="font-size: 0.8rem; opacity: 0.5;">Impressions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Client Testimonials -->
+    <section class="section-padding" style="background: #f4f7fe;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 50px;">What Our Partners Say</h2>
+            <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 30px; text-align: left;">
+                <div class="card" style="padding: 40px;">
+                    <p style="font-size: 1.2rem; font-style: italic; margin-bottom: 20px;">"ASO Elite didn't just give us a list of keywords; they gave us a complete growth framework. Our organic downloads are now our primary acquisition channel."</p>
+                    <div class="flex" style="align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd;"></div>
+                        <div>
+                            <strong>Sarah Miller</strong>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">CMO, Fintech Global</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="padding: 40px;">
+                    <p style="font-size: 1.2rem; font-style: italic; margin-bottom: 20px;">"The attention to detail in visual optimization is unmatched. Our app store conversion rate has never been higher."</p>
+                    <div class="flex" style="align-items: center; gap: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #ddd;"></div>
+                        <div>
+                            <strong>James Chen</strong>
+                            <p style="font-size: 0.8rem; opacity: 0.6;">Founder, GameX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Growth Chart Comparison -->
+    <section class="section-padding">
+        <div class="container grid" style="grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+            <div>
+                <h2 style="font-size: 3rem; margin-bottom: 20px;">The Trajectory of <span style="color: var(--neon-coral);">Success</span></h2>
+                <p style="margin-bottom: 30px;">Our typical client engagement sees a dramatic shift in organic discovery within the first 90 days. We focus on sustainable growth that compounds over time.</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 15px;">✓ Year-over-year organic growth</li>
+                    <li style="margin-bottom: 15px;">✓ Reduced reliance on paid acquisition</li>
+                    <li>✓ High-quality user retention</li>
+                </ul>
+            </div>
+            <div style="background: var(--secondary-bg); transition: var(--transition); padding: 40px; border-radius: 30px;">
+                <div style="height: 300px; display: flex; align-items: flex-end; gap: 20px;">
+                    <div style="flex-grow: 1; height: 30%; background: #333; border-radius: 10px 10px 0 0; position: relative;">
+                        <span style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">Month 1</span>
+                    </div>
+                    <div style="flex-grow: 1; height: 45%; background: #444; border-radius: 10px 10px 0 0; position: relative;">
+                        <span style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">Month 2</span>
+                    </div>
+                    <div style="flex-grow: 1; height: 60%; background: var(--primary-purple); border-radius: 10px 10px 0 0; position: relative;">
+                        <span style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">Month 3</span>
+                    </div>
+                    <div style="flex-grow: 1; height: 95%; background: var(--neon-coral); border-radius: 10px 10px 0 0; position: relative;">
+                        <span style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); font-size: 0.8rem;">Peak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. CTA Section -->
+    <section class="section-padding" style="background: var(--peach-gradient); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 20px;">Ready to be Our Next Success Story?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Let's build your growth engine together.</p>
+            <a href="contact.html" class="btn btn-primary" style="padding: 20px 40px;">Start Your Project</a>
+        </div>
+    </section>
+
+    <footer class="section-padding" style="background: #111; color: white;">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">ASO ELITE</a>
+                    <p style="opacity: 0.7;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="about.html" style="opacity: 0.7;">About Us</a></li>
+                        <li><a href="portfolio.html" style="opacity: 0.7;">Portfolio</a></li>
+                        <li><a href="services.html" style="opacity: 0.7;">Services</a></li>
+                        <li><a href="blog.html" style="opacity: 0.7;">Resources</a></li>
+                        <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="#" style="opacity: 0.7;">Keyword Research</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Asset Optimization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Localization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Performance Audits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="social-links flex" style="gap: 15px; margin-top: 20px;">
+                        <a href="#" style="font-size: 20px;">FB</a>
+                        <a href="#" style="font-size: 20px;">IG</a>
+                        <a href="#" style="font-size: 20px;">LI</a>
+                        <a href="#" style="font-size: 20px;">TW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 80px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.5;">
+                <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

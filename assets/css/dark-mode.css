@@ -1,0 +1,37 @@
+/* Dark Mode Specific Overrides */
+:root[data-theme="dark"] {
+    --bg-color: #0f0c29;
+    --text-color: #f1f2f6;
+    --card-bg: #1a1a2e;
+    --navbar-bg: rgba(15, 12, 41, 0.8);
+    --glass-bg: rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .card {
+    background-color: var(--card-bg);
+    border-color: rgba(255,255,255,0.05);
+}
+
+[data-theme="dark"] .section-padding {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] input, 
+[data-theme="dark"] textarea {
+    background-color: #242442;
+    border-color: #3d3d63;
+    color: white;
+}
+
+[data-theme="dark"] header.sticky {
+    background: var(--navbar-bg);
+}
+
+[data-theme="dark"] .logo {
+    filter: drop-shadow(0 0 5px rgba(255, 118, 117, 0.5));
+}

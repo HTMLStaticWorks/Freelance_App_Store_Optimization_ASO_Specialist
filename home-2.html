@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASO Elite | Premium Growth Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .mesh-bg {
+            background-color: #f4f7fe;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,100%,95%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,100%,90%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,100%,95%,1) 0, transparent 50%);
+            transition: var(--transition);
+        }
+        [data-theme="dark"] .mesh-bg {
+            background-color: #0f0c29;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+        [data-theme="dark"] .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none;">
+                <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 40px; border-radius: 8px;">
+                <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home 1</a>
+                <a href="home-2.html">Home 2</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions flex" style="gap: 15px; align-items: center;">
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>Dark</span>
+                </div>
+                <div class="toggle-container">
+                    <label class="switch">
+                        <input type="checkbox" id="rtl-toggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span>RTL</span>
+                </div>
+                <a href="login.html" class="btn btn-outline">Login</a>
+            </div>
+            <button class="mobile-menu-btn" style="display: none;">☰</button>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="mesh-bg" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding-top: 100px;">
+        <div class="container" style="position: relative; z-index: 2; text-align: center;">
+            <span style="color: var(--neon-coral); text-transform: uppercase; letter-spacing: 2px; font-weight: 700; margin-bottom: 20px; display: block;">The Future of App Growth</span>
+            <h1 style="font-size: clamp(3rem, 10vw, 6rem); margin-bottom: 30px; line-height: 1;">Exponential <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Organic</span> Scalability</h1>
+            <p style="opacity: 0.7; font-size: 1.4rem; max-width: 800px; margin: 0 auto 50px;">Bespoke ASO engineering for ambitious apps. We turn low visibility into market leadership through data-backed optimization.</p>
+            <div class="flex" style="justify-content: center; gap: 20px;">
+                <a href="#booking" class="btn btn-primary" style="padding: 18px 45px; font-size: 1.1rem;">Book a Strategy Call</a>
+                <a href="#" class="btn glass-card" style="padding: 18px 45px; font-size: 1.1rem;">Explore Our Work</a>
+            </div>
+        </div>
+        <!-- Floating UI Elements -->
+        <div class="glass-card floating" style="position: absolute; top: 20%; left: 10%; padding: 20px; border-radius: 20px; width: 200px;">
+            <div style="font-size: 0.8rem; opacity: 0.6;">Conversion Boost</div>
+            <div style="font-size: 1.5rem; font-weight: bold;">+124%</div>
+            <div style="height: 4px; background: var(--neon-coral); margin-top: 10px; width: 80%;"></div>
+        </div>
+        <div class="glass-card floating" style="position: absolute; bottom: 20%; right: 10%; padding: 20px; border-radius: 20px; width: 220px;">
+            <div style="font-size: 0.8rem; opacity: 0.6;">Organic Downloads</div>
+            <div style="font-size: 1.5rem; font-weight: bold;">842,000</div>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Chart" style="width: 100%; height: 40px; margin-top: 10px; object-fit: cover; opacity: 0.5;">
+        </div>
+    </section>
+
+    <!-- 2. Featured App Growth Results -->
+    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition);">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 80px;">
+                <h2 style="font-size: 3.5rem;">Elite Results</h2>
+                <p style="opacity: 0.6;">We scale apps from zero to millions.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 30px;">
+                <div class="glass-card" style="padding: 40px; border-radius: 30px; text-align: center;">
+                    <h3 style="font-size: 3rem; color: var(--neon-coral);" class="counter">85%</h3>
+                    <p style="opacity: 0.7; margin-top: 10px;">Avg. Install Growth</p>
+                </div>
+                <div class="glass-card" style="padding: 40px; border-radius: 30px; text-align: center;">
+                    <h3 style="font-size: 3rem; color: var(--neon-coral);" class="counter">12k</h3>
+                    <p style="opacity: 0.7; margin-top: 10px;">Keywords Optimized</p>
+                </div>
+                <div class="glass-card" style="padding: 40px; border-radius: 30px; text-align: center;">
+                    <h3 style="font-size: 3rem; color: var(--neon-coral);" class="counter">200+</h3>
+                    <p style="opacity: 0.7; margin-top: 10px;">Global Clients</p>
+                </div>
+                <div class="glass-card" style="padding: 40px; border-radius: 30px; text-align: center;">
+                    <h3 style="font-size: 3rem; color: var(--neon-coral);" class="counter">15M+</h3>
+                    <p style="opacity: 0.7; margin-top: 10px;">Total Installs Driven</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ASO Strategy Process -->
+    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition);">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 100px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 3rem; margin-bottom: 30px;">The <span style="color: var(--neon-coral);">Bento</span> Approach to ASO</h2>
+                    <p style="opacity: 0.7; margin-bottom: 40px;">Our proprietary methodology combines semantic keyword clustering with visual performance engineering.</p>
+                    <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        <div class="glass-card" style="padding: 25px; border-radius: 20px;">
+                            <h4>Semantic Maps</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.6;">Deep keyword hierarchy building.</p>
+                        </div>
+                        <div class="glass-card" style="padding: 25px; border-radius: 20px;">
+                            <h4>Visual DNA</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.6;">Brand-specific store asset design.</p>
+                        </div>
+                        <div class="glass-card" style="padding: 25px; border-radius: 20px;">
+                            <h4>Global Scaling</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.6;">Cultural localization across 40+ stores.</p>
+                        </div>
+                        <div class="glass-card" style="padding: 25px; border-radius: 20px;">
+                            <h4>A/B Mastery</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.6;">Continuous testing and refinement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <img src="assets/images/dashboard_mockup.png" alt="Strategy Illustration" style="width: 100%; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                    <div class="glass-card" style="position: absolute; bottom: -30px; left: -30px; padding: 25px; border-radius: 20px;">
+                        <div style="font-weight: 800; font-size: 1.2rem;">Data Integrity</div>
+                        <div style="font-size: 0.8rem; opacity: 0.6;">Certified Analytics Reports</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. App Store Screenshot Optimization Gallery -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-size: 3rem;">Visual Conversion Masterclass</h2>
+                <p>See how we transform standard screenshots into high-performance assets.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Screenshot 1" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Screenshot 2" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Screenshot 3" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Screenshot 4" style="width: 100%; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials + Metrics -->
+    <section class="section-padding" style="background: var(--card-bg); transition: var(--transition);">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 60px; align-items: center;">
+                <div>
+                    <h2 style="font-size: 3rem; margin-bottom: 20px;">Loved by <span style="color: var(--neon-coral);">Growth Teams</span></h2>
+                    <p style="opacity: 0.7; margin-bottom: 30px;">Join 500+ apps that have scaled their organic presence with our elite ASO services.</p>
+                    <a href="contact.html" class="btn btn-outline">Read More Reviews</a>
+                </div>
+                <div class="grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div class="card">
+                        <p style="font-style: italic; margin-bottom: 15px;">"The best ASO specialist we've ever worked with. Our downloads doubled in two months."</p>
+                        <strong>Sarah J.</strong>
+                        <div style="font-size: 0.8rem; opacity: 0.6;">Head of Marketing, FitTrack</div>
+                    </div>
+                    <div class="card">
+                        <p style="font-style: italic; margin-bottom: 15px;">"Data accuracy and strategic insight are unmatched. Highly recommended for scaling."</p>
+                        <strong>Mike T.</strong>
+                        <div style="font-size: 0.8rem; opacity: 0.6;">CEO, GameX Studios</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Consultation Booking CTA -->
+    <section class="section-padding" id="booking">
+        <div class="container">
+            <div class="glass-card" style="padding: 80px; border-radius: 40px; text-align: center;">
+                <h2 style="font-size: 4rem; margin-bottom: 20px;">Claim Your Market Share</h2>
+                <p style="font-size: 1.3rem; margin-bottom: 50px; opacity: 0.7;">Stop leaving downloads on the table. Let's build your growth engine.</p>
+                <div class="flex" style="justify-content: center; gap: 30px;">
+                    <div style="text-align: left;">
+                        <h4 style="color: var(--neon-coral);">Fast Audit</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.6;">Delivered in 24 hours</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <h4 style="color: var(--neon-coral);">Strategy Call</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.6;">1-on-1 Growth session</p>
+                    </div>
+                    <div style="text-align: left;">
+                        <h4 style="color: var(--neon-coral);">Price Match</h4>
+                        <p style="font-size: 0.9rem; opacity: 0.6;">Premium value guarantee</p>
+                    </div>
+                </div>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 60px; padding: 20px 60px; font-size: 1.2rem;">Book Your Session Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-padding" style="background: #111; color: white;">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 40px;">
+                <div class="footer-col">
+                    <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 20px;">
+                        <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 35px; border-radius: 5px;">
+                        <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+                    </a>
+                    <p style="opacity: 0.7;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="about.html" style="opacity: 0.7;">About Us</a></li>
+                        <li><a href="portfolio.html" style="opacity: 0.7;">Portfolio</a></li>
+                        <li><a href="services.html" style="opacity: 0.7;">Services</a></li>
+                        <li><a href="blog.html" style="opacity: 0.7;">Resources</a></li>
+                        <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="#" style="opacity: 0.7;">Keyword Research</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Asset Optimization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Localization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Performance Audits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="social-links flex" style="gap: 15px; margin-top: 20px;">
+                        <a href="#" style="font-size: 20px;">FB</a>
+                        <a href="#" style="font-size: 20px;">IG</a>
+                        <a href="#" style="font-size: 20px;">LI</a>
+                        <a href="#" style="font-size: 20px;">TW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 80px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.5;">
+                <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+</body>
+</html>
