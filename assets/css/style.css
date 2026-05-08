@@ -124,6 +124,21 @@ ul {
     color: white;
 }
 
+.btn-glass {
+    background: var(--glass-bg);
+    color: white !important;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-glass:hover {
+    background: white;
+    color: var(--neon-coral) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Navbar Base Structure */
 header {
     position: fixed;
@@ -445,6 +460,11 @@ input:checked+.slider:before {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        text-align: center !important;
+    }
+
+    .tablet-center div,
+    .tablet-center span {
         text-align: center !important;
     }
 
@@ -819,5 +839,65 @@ header input:checked+.slider {
 @media (max-width: 600px) {
     .process-container {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Scroll Controls */
+.scroll-controls {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.scroll-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.scroll-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-btn:hover {
+    background: var(--primary-purple);
+    color: white;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(108, 92, 231, 0.3);
+}
+
+.scroll-btn i {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .scroll-controls {
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .scroll-btn {
+        width: 45px;
+        height: 45px;
     }
 }

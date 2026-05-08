@@ -140,4 +140,35 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll();
+
+    // Scroll Up Button
+    const scrollControls = document.createElement('div');
+    scrollControls.className = 'scroll-controls';
+    scrollControls.innerHTML = `
+        <button id="scroll-up" class="scroll-btn" title="Scroll to Top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    `;
+    document.body.appendChild(scrollControls);
+
+    const scrollUpBtn = document.getElementById('scroll-up');
+
+    const handleScrollButtons = () => {
+        // Show/hide scroll up button
+        if (window.scrollY > 300) {
+            scrollUpBtn.classList.add('show');
+        } else {
+            scrollUpBtn.classList.remove('show');
+        }
+    };
+
+    window.addEventListener('scroll', handleScrollButtons);
+    handleScrollButtons(); // Initial check
+
+    scrollUpBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
