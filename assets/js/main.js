@@ -52,9 +52,38 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    const navActions = document.querySelector('.nav-actions');
+
+    // On mobile/tablet, move nav-actions inside nav-links for the menu
+    const moveActions = () => {
+        if (!navLinks || !navActions) return;
+        
+        if (window.innerWidth <= 1024) {
+            if (!navLinks.contains(navActions)) {
+                navLinks.appendChild(navActions);
+            }
+        } else {
+            const navContainer = document.querySelector('.nav-container');
+            if (navContainer && navLinks.contains(navActions)) {
+                navContainer.insertBefore(navActions, mobileMenuBtn);
+            }
+        }
+    };
+
+    window.addEventListener('resize', moveActions);
+    moveActions();
 
     mobileMenuBtn?.addEventListener('click', () => {
+        if (!navLinks) return;
         navLinks.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) {
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        }
     });
 
     // Active Nav Link Highlight
@@ -67,6 +96,39 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         }
     });
+
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.innerText.replace(/[^0-9]/g, ''));
+        const suffix = counter.innerText.replace(/[0-9]/g, '');
+        let count = 0;
+        
+        const updateCount = () => {
+            const increment = target / speed;
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count) + suffix;
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target + suffix;
+            }
+        };
+        updateCount();
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => counterObserver.observe(counter));
 
     // Scroll reveal placeholder
     const revealElements = document.querySelectorAll('.reveal');

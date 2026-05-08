@@ -19,8 +19,9 @@
         .pricing-card.featured {
             border-color: var(--primary-purple);
             transform: scale(1.05);
+            transform-origin: bottom center;
             z-index: 10;
-            background: #fff;
+            background: var(--card-bg);
         }
         .pricing-card h2 {
             font-size: 3rem;
@@ -44,11 +45,48 @@
             font-weight: bold;
         }
         .faq-item {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 20px 0;
+        }
+        .faq-header h4 {
+            margin: 0;
+            transition: var(--transition);
+        }
+        .faq-header i {
+            transition: transform 0.3s ease;
+            color: var(--primary-purple);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            opacity: 1;
             padding-bottom: 20px;
         }
+        .faq-item.active .faq-header i {
+            transform: rotate(180deg);
+        }
+        .faq-item.active .faq-header h4 {
+            color: var(--primary-purple);
+        }
+        [data-theme="dark"] .faq-item {
+            border-bottom-color: rgba(255,255,255,0.1);
+        }
     </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -64,7 +102,7 @@
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="services.html">Services</a>
-                <a href="blog.html">Blog</a>
+
                 <a href="pricing.html" class="active">Pricing</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -90,17 +128,17 @@
     </header>
 
     <!-- 1. Pricing Hero -->
-    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition); padding-top: 150px; text-align: center;">
+    <section class="section-padding" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/pricing-hero.png'); background-size: cover; background-position: center bottom; transition: var(--transition); text-align: center; padding-top: 180px; padding-bottom: 200px; color: white;">
         <div class="container">
-            <h1 style="font-size: 4rem; margin-bottom: 20px;">Invest in Your <span style="color: var(--neon-coral);">Growth</span></h1>
-            <p style="font-size: 1.2rem; opacity: 0.7; max-width: 600px; margin: 0 auto;">Transparent pricing for apps at every stage of their lifecycle.</p>
+            <h1 style="font-size: 4rem; margin-bottom: 20px; color: white;">Invest in Your <span style="color: var(--neon-coral);">Growth</span></h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.9; color: white;">Transparent pricing for apps at every stage of their lifecycle.</p>
         </div>
     </section>
 
     <!-- 2. Pricing Tables -->
     <section class="section-padding">
         <div class="container">
-            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 20px; align-items: flex-start;">
+            <div class="portfolio-grid" style="align-items: stretch;">
                 <div class="card pricing-card">
                     <h3>Starter</h3>
                     <p style="opacity: 0.6;">For new apps</p>
@@ -114,7 +152,7 @@
                     <a href="register.html" class="btn btn-outline">Get Started</a>
                 </div>
                 <div class="card pricing-card featured">
-                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-purple); color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">MOST POPULAR</span>
+                    <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary-purple); color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; white-space: nowrap;">MOST POPULAR</span>
                     <h3>Growth</h3>
                     <p style="opacity: 0.6;">For scaling apps</p>
                     <h2>$1,299<span style="font-size: 1rem; opacity: 0.5;">/mo</span></h2>
@@ -162,52 +200,123 @@
         <div class="container" style="max-width: 800px;">
             <h2 style="text-align: center; margin-bottom: 50px;">Frequently Asked Questions</h2>
             <div class="faq-item">
-                <h4 style="margin-bottom: 10px;">How long does it take to see results?</h4>
-                <p style="opacity: 0.7;">Most apps see a shift in keyword rankings within 14-21 days of implementation. Organic install growth typically follows shortly after.</p>
+                <div class="faq-header">
+                    <h4>How long does it take to see results?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Most apps see a shift in keyword rankings within 14-21 days of implementation. Organic install growth typically follows shortly after.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h4 style="margin-bottom: 10px;">Do you handle the store uploads?</h4>
-                <p style="opacity: 0.7;">For our Growth and Professional plans, we can provide direct implementation support or guide your team through the upload process.</p>
+                <div class="faq-header">
+                    <h4>Do you handle the store uploads?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>For our Growth and Professional plans, we can provide direct implementation support or guide your team through the upload process.</p>
+                </div>
             </div>
             <div class="faq-item">
-                <h4 style="margin-bottom: 10px;">Can I cancel my plan at any time?</h4>
-                <p style="opacity: 0.7;">Yes, our monthly plans are flexible with no long-term contracts. Annual plans are also available for a 20% discount.</p>
+                <div class="faq-header">
+                    <h4>Can I cancel my plan at any time?</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our monthly plans are flexible with no long-term contracts. Annual plans are also available for a 20% discount.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 4. Enterprise Custom Solutions -->
-    <section class="section-padding" style="background: var(--peach-gradient); color: white;">
-        <div class="container grid" style="grid-template-columns: 1.5fr 1fr; gap: 60px; align-items: center;">
-            <div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Need a Tailored Solution?</h2>
-                <p style="opacity: 0.8; font-size: 1.1rem;">We work with major app publishers to create custom growth engines that integrate directly with their internal data stacks.</p>
-            </div>
-            <div style="text-align: right;">
-                <a href="contact.html" class="btn btn-primary" style="padding: 20px 40px;">Speak to an Expert</a>
-            </div>
+    <section class="section-padding" style="background: var(--peach-gradient); color: white; text-align: center;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Need a Tailored Solution?</h2>
+            <p style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 40px;">We work with major app publishers to create custom growth engines that integrate directly with their internal data stacks.</p>
+            <a href="contact.html" class="btn btn-primary" style="padding: 20px 40px; background: white; color: var(--neon-coral);">Speak to an Expert</a>
         </div>
     </section>
 
-    <!-- 5. Trust Badges -->
-    <section class="section-padding">
-        <div class="container" style="text-align: center;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.4; margin-bottom: 40px;">Trusted by Industry Leaders</p>
-            <div class="flex" style="justify-content: center; gap: 60px; opacity: 0.5; filter: grayscale(1);">
-                <span style="font-size: 1.5rem; font-weight: 800;">TECHCORP</span>
-                <span style="font-size: 1.5rem; font-weight: 800;">APPGENIUS</span>
-                <span style="font-size: 1.5rem; font-weight: 800;">VITALITY</span>
-                <span style="font-size: 1.5rem; font-weight: 800;">STREAMLY</span>
-            </div>
-        </div>
-    </section>
 
+
+    <!-- Footer -->
     <footer class="section-padding" style="background: #111; color: white;">
-        <div class="container" style="text-align: center; opacity: 0.5;">
-            <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr; gap: 40px;">
+                <div class="footer-col">
+                    <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 20px;">
+                        <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 35px; border-radius: 5px;">
+                        <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+                    </a>
+                    <p style="opacity: 0.7; max-width: 300px;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                    <div class="social-links flex" style="margin-top: 25px;">
+                        <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="about.html" style="opacity: 0.7;">About Us</a></li>
+                        <li><a href="portfolio.html" style="opacity: 0.7;">Portfolio</a></li>
+                        <li><a href="services.html" style="opacity: 0.7;">Services</a></li>
+
+                        <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="#" style="opacity: 0.7;">Keyword Research</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Asset Optimization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Localization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Performance Audits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul style="margin-top: 20px;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-envelope" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>growth@asoelite.com</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-phone" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; opacity: 0.7;">
+                            <i class="fas fa-location-dot" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>100 Innovation Drive, SF</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 80px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.5;">
+                <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

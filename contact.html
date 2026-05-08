@@ -11,12 +11,25 @@
     <style>
         .contact-card {
             text-align: center;
-            padding: 40px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
-        .contact-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: var(--primary-purple);
+        .contact-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .contact-card-content {
+            padding: 30px 20px;
+            flex-grow: 1;
+        }
+        .contact-card h4 {
+            margin-bottom: 10px;
+            font-weight: 700;
         }
         .form-input {
             width: 100%;
@@ -27,6 +40,8 @@
             margin-bottom: 20px;
         }
     </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -42,7 +57,7 @@
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="services.html">Services</a>
-                <a href="blog.html">Blog</a>
+
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html" class="active">Contact</a>
             </nav>
@@ -78,38 +93,46 @@
     <!-- 2. Contact Info Cards -->
     <section class="section-padding">
         <div class="container">
-            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 30px;">
+            <div class="portfolio-grid">
                 <div class="card contact-card">
-                    <div class="icon">📧</div>
-                    <h4>Email Us</h4>
-                    <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 10px;">growth@asoelite.com</p>
+                    <img src="assets/images/contact-email.png" alt="Email Us">
+                    <div class="contact-card-content">
+                        <h4>Email Us</h4>
+                        <p style="opacity: 0.7; font-size: 0.9rem;">growth@asoelite.com</p>
+                    </div>
                 </div>
                 <div class="card contact-card">
-                    <div class="icon">📞</div>
-                    <h4>Call Us</h4>
-                    <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 10px;">+1 (555) 123-4567</p>
+                    <img src="assets/images/contact-call.png" alt="Call Us">
+                    <div class="contact-card-content">
+                        <h4>Call Us</h4>
+                        <p style="opacity: 0.7; font-size: 0.9rem;">+1 (555) 123-4567</p>
+                    </div>
                 </div>
                 <div class="card contact-card">
-                    <div class="icon">📍</div>
-                    <h4>Office</h4>
-                    <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 10px;">San Francisco, CA</p>
+                    <img src="assets/images/contact-office.png" alt="Office">
+                    <div class="contact-card-content">
+                        <h4>Office</h4>
+                        <p style="opacity: 0.7; font-size: 0.9rem;">San Francisco, CA</p>
+                    </div>
                 </div>
                 <div class="card contact-card">
-                    <div class="icon">🤝</div>
-                    <h4>Partnerships</h4>
-                    <p style="opacity: 0.7; font-size: 0.9rem; margin-top: 10px;">partners@asoelite.com</p>
+                    <img src="assets/images/contact-partnership.png" alt="Partnerships">
+                    <div class="contact-card-content">
+                        <h4>Partnerships</h4>
+                        <p style="opacity: 0.7; font-size: 0.9rem;">partners@asoelite.com</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. Contact Form Section -->
-    <section class="section-padding" style="background: #f4f7fe;">
-        <div class="container grid" style="grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
+    <section class="section-padding" style="background: var(--secondary-bg); transition: var(--transition);">
+        <div class="container grid tablet-center" style="grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;">
             <div>
                 <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Send us a <span style="color: var(--primary-purple);">Message</span></h2>
                 <p style="margin-bottom: 40px; opacity: 0.7;">Fill out the form and our growth specialists will get back to you within 24 hours.</p>
-                <div style="background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div class="card" style="padding: 30px; border-radius: 20px;">
                     <h4 style="margin-bottom: 15px;">What happens next?</h4>
                     <ul style="list-style: decimal; padding-left: 20px; font-size: 0.9rem; opacity: 0.8;">
                         <li style="margin-bottom: 10px;">We review your app's current store presence.</li>
@@ -120,7 +143,7 @@
             </div>
             <div>
                 <form class="card" style="padding: 40px;">
-                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="grid-2">
                         <input type="text" class="form-input" placeholder="First Name" required>
                         <input type="text" class="form-input" placeholder="Last Name" required>
                     </div>
@@ -140,12 +163,17 @@
                 <h2 style="font-size: 2.5rem;">Our Global Reach</h2>
                 <p>We work with apps across all timezones.</p>
             </div>
-            <div style="width: 100%; height: 450px; background: #eee; border-radius: 30px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
-                <div style="position: absolute; text-align: center;">
-                    <h3 style="color: #666;">Interactive Map Integration</h3>
-                    <p style="opacity: 0.5;">San Francisco | London | Berlin | Tokyo</p>
-                </div>
+            <div style="width: 100%; height: 450px; border-radius: 30px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background: var(--secondary-bg);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.27318357497!2d-122.5076402!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1715170584285!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; min-height: 450px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="ASO Elite Global Office Map">
+                </iframe>
             </div>
         </div>
     </section>
@@ -155,13 +183,66 @@
         <div class="container">
             <h2 style="font-size: 2.5rem; margin-bottom: 20px;">For Agencies & VCs</h2>
             <p style="opacity: 0.7; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">We partner with venture capital firms and marketing agencies to provide specialized ASO support for their portfolios.</p>
-            <a href="#" class="btn btn-outline" style="color: white; border-color: white;">Inquire About Partnerships</a>
+            <a href="#" class="btn btn-primary">Inquire About Partnerships</a>
         </div>
     </section>
 
     <footer class="section-padding" style="background: #111; color: white;">
-        <div class="container" style="text-align: center; opacity: 0.5;">
-            <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr; gap: 40px;">
+                <div class="footer-col">
+                    <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 20px;">
+                        <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 35px; border-radius: 5px;">
+                        <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+                    </a>
+                    <p style="opacity: 0.7; max-width: 300px;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                    <div class="social-links flex" style="margin-top: 25px;">
+                        <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="about.html" style="opacity: 0.7;">About Us</a></li>
+                        <li><a href="portfolio.html" style="opacity: 0.7;">Portfolio</a></li>
+                        <li><a href="services.html" style="opacity: 0.7;">Services</a></li>
+
+                        <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="#" style="opacity: 0.7;">Keyword Research</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Asset Optimization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Localization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Performance Audits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul style="margin-top: 20px;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-envelope" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>growth@asoelite.com</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-phone" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; opacity: 0.7;">
+                            <i class="fas fa-location-dot" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>100 Innovation Drive, SF</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 80px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.5;">
+                <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 

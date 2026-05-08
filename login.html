@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +9,92 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #0f0c29;
-            overflow: hidden;
+            overflow-x: hidden;
         }
+
         .login-container {
             width: 100%;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-        }
-        .login-visual {
-            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px;
-            color: white;
-            text-align: center;
+            padding: 20px;
+            position: relative;
         }
+
         .login-form-side {
-            background: var(--bg-color);
+            background: var(--card-bg);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 60px;
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--glass-border);
+            width: 100%;
+            max-width: 500px;
+            z-index: 1;
         }
+
         .form-box {
             width: 100%;
             max-width: 450px;
         }
+
         .social-login {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-bottom: 30px;
         }
+
         .input-group {
             margin-bottom: 20px;
         }
+
         .input-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
         }
+
+        .password-group {
+            position: relative;
+        }
+
+        .password-group i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            opacity: 0.6;
+            transition: var(--transition);
+            z-index: 2;
+        }
+
+        .password-group i:hover {
+            opacity: 1;
+            color: var(--primary-purple);
+        }
+
         .input-group input {
             width: 100%;
             padding: 15px;
             border-radius: var(--radius-md);
             border: 1px solid #ddd;
-            background: var(--secondary-bg); transition: var(--transition);
+            background: var(--secondary-bg);
+            transition: var(--transition);
         }
+
         .floating-bg {
             position: absolute;
             width: 300px;
@@ -76,37 +105,86 @@
             z-index: -1;
             border-radius: 50%;
         }
+
+        .page-actions {
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center;
+            gap: 25px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.05);
+            padding: 10px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            white-space: nowrap;
+        }
+
+        @media (max-width: 480px) {
+            .login-form-side {
+                padding: 30px 20px;
+                margin: 10px;
+                margin-top: 80px;
+            }
+            .social-login {
+                grid-template-columns: 1fr;
+            }
+            .page-actions {
+                top: 20px;
+                gap: 15px;
+                padding: 8px 20px;
+            }
+            .form-box h1 {
+                font-size: 1.8rem !important;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="floating-bg" style="top: -100px; right: -100px;"></div>
     <div class="floating-bg" style="bottom: -100px; left: -100px;"></div>
 
-    <div class="login-container">
-        <div class="login-visual">
-            <div>
-                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Welcome Back</h1>
-                <p style="font-size: 1.2rem; opacity: 0.8;">Access your app's growth metrics and manage your ASO campaigns in one place.</p>
+
+
+    <div class="login-container" style="flex-direction: column; gap: 30px; padding: 60px 20px;">
+        <div class="page-actions" style="position: static; transform: none; margin-bottom: 0;">
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: white;">Dark</span>
+            </div>
+            <div class="toggle-container">
+                <label class="switch">
+                    <input type="checkbox" id="rtl-toggle">
+                    <span class="slider"></span>
+                </label>
+                <span style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: white;">RTL</span>
             </div>
         </div>
+
         <div class="login-form-side">
             <div class="form-box">
-                <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 40px;">
+                <a href="index.html" class="logo flex"
+                    style="align-items: center; justify-content: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 40px;">
                     <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 40px; border-radius: 8px;">
-                    <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+                    <span
+                        style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO
+                        ELITE</span>
                 </a>
-                <h2 style="margin-bottom: 10px;">Login</h2>
-                <p style="opacity: 0.6; margin-bottom: 40px;">Don't have an account? <a href="register.html" style="color: var(--primary-purple); font-weight: bold;">Sign Up</a></p>
-                
-                <div class="social-login">
-                    <button class="btn btn-outline" style="font-size: 0.9rem;">Google</button>
-                    <button class="btn btn-outline" style="font-size: 0.9rem;">Apple ID</button>
+                <div style="margin-bottom: 30px; text-align: center;">
+                    <h1 style="font-size: 2.2rem; margin-bottom: 10px;">Welcome Back</h1>
+                    <p style="font-size: 1rem; opacity: 0.7;">Access your app's growth metrics and manage your ASO
+                        campaigns in one place.</p>
                 </div>
 
-                <div class="divider" style="text-align: center; margin-bottom: 30px; position: relative;">
-                    <span style="background: var(--bg-color); padding: 0 15px; position: relative; z-index: 1;">OR</span>
-                    <hr style="position: absolute; top: 50%; width: 100%; border: 0; border-top: 1px solid #ddd;">
-                </div>
+                <h2 style="margin-bottom: 20px; text-align: center;">Login</h2>
 
                 <form action="index.html">
                     <div class="input-group">
@@ -115,18 +193,59 @@
                     </div>
                     <div class="input-group">
                         <label>Password</label>
-                        <input type="password" placeholder="••••••••" required>
+                        <div class="password-group">
+                            <input type="password" placeholder="••••••••" required style="padding-right: 45px;">
+                            <i class="fas fa-eye toggle-password"></i>
+                        </div>
                     </div>
-                    <div class="flex" style="justify-content: space-between; margin-bottom: 30px; font-size: 0.9rem;">
+                    <div class="flex"
+                        style="display: flex !important; flex-direction: row !important; justify-content: space-between; align-items: center; margin-bottom: 30px; font-size: 0.9rem;">
                         <label><input type="checkbox"> Remember me</label>
                         <a href="#" style="color: var(--primary-purple);">Forgot Password?</a>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px;">Login to Portal</button>
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; padding: 18px; margin-bottom: 30px;">Login to Portal</button>
                 </form>
+
+                <div class="divider" style="text-align: center; margin-bottom: 30px; position: relative;">
+                    <span style="background: var(--card-bg); padding: 0 15px; position: relative; z-index: 1;">OR</span>
+                    <hr style="position: absolute; top: 50%; width: 100%; border: 0; border-top: 1px solid #ddd;">
+                </div>
+
+                <div class="social-login">
+                    <button class="btn btn-outline"
+                        style="font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button class="btn btn-outline"
+                        style="font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fab fa-apple"></i> Apple ID
+                    </button>
+                </div>
+
+                <p style="text-align: center; opacity: 0.8;">Don't have an account? <a href="register.html"
+                        style="color: var(--primary-purple); font-weight: bold;">Sign Up</a></p>
             </div>
         </div>
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.toggle-password').forEach(icon => {
+            icon.addEventListener('click', function () {
+                const input = this.parentElement.querySelector('input');
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    this.classList.remove('fa-eye');
+                    this.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    this.classList.remove('fa-eye-slash');
+                    this.classList.add('fa-eye');
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

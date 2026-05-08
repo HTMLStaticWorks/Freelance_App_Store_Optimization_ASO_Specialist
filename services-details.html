@@ -8,6 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
@@ -23,7 +28,7 @@
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="services.html">Services</a>
-                <a href="blog.html">Blog</a>
+
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -49,7 +54,7 @@
     </header>
 
     <!-- 1. Detail Hero -->
-    <section class="section-padding" style="background: #f4f7fe; padding-top: 150px;">
+    <section class="section-padding" style="background: var(--secondary-bg); padding-top: 150px; transition: var(--transition);">
         <div class="container grid" style="grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center;">
             <div>
                 <span style="color: var(--primary-purple); font-weight: 700;">Service Deep Dive</span>
@@ -74,19 +79,19 @@
     <section class="section-padding" style="background: var(--secondary-bg); transition: var(--transition);">
         <div class="container">
             <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 30px;">
-                <div class="card" style="background: rgba(255,255,255,0.05); border: none;">
+                <div class="card">
                     <h4 style="color: var(--neon-coral);">Discovery</h4>
                     <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 15px;">Broad-spectrum harvesting of 500+ potential search terms across languages.</p>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.05); border: none;">
+                <div class="card">
                     <h4 style="color: var(--neon-coral);">Filtering</h4>
                     <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 15px;">Data-driven selection based on volume, difficulty, and relevance scoring.</p>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.05); border: none;">
+                <div class="card">
                     <h4 style="color: var(--neon-coral);">Mapping</h4>
                     <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 15px;">Strategic placement in titles, subtitles, and hidden keyword fields.</p>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.05); border: none;">
+                <div class="card">
                     <h4 style="color: var(--neon-coral);">Iteration</h4>
                     <p style="font-size: 0.9rem; opacity: 0.7; margin-top: 15px;">Weekly rank tracking and reallocation of resources to winning terms.</p>
                 </div>
@@ -97,7 +102,7 @@
     <!-- 4. Case Study Highlight (Comparison) -->
     <section class="section-padding">
         <div class="container grid" style="grid-template-columns: repeat(2, 1fr); gap: 60px; align-items: center;">
-            <div class="card" style="background: #fdfdfd; padding: 40px; border: 2px solid #eee;">
+            <div class="card" style="padding: 40px;">
                 <h3 style="margin-bottom: 20px;">The Result</h3>
                 <div class="flex" style="justify-content: space-between; margin-bottom: 15px;">
                     <span>Primary Keyword Rank:</span>
@@ -128,12 +133,170 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="section-padding" style="background: #111; color: white;">
-        <div class="container" style="text-align: center; opacity: 0.5;">
-            <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr; gap: 40px;">
+                <div class="footer-col">
+                    <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 20px;">
+                        <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 35px; border-radius: 5px;">
+                        <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+                    </a>
+                    <p style="opacity: 0.7; max-width: 300px;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                    <div class="social-links flex" style="margin-top: 25px;">
+                        <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="about.html" style="opacity: 0.7;">About Us</a></li>
+                        <li><a href="portfolio.html" style="opacity: 0.7;">Portfolio</a></li>
+                        <li><a href="services.html" style="opacity: 0.7;">Services</a></li>
+
+                        <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul style="margin-top: 20px;">
+                        <li><a href="#" style="opacity: 0.7;">Keyword Research</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Asset Optimization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Localization</a></li>
+                        <li><a href="#" style="opacity: 0.7;">Performance Audits</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul style="margin-top: 20px;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-envelope" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>growth@asoelite.com</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-phone" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; opacity: 0.7;">
+                            <i class="fas fa-location-dot" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>100 Innovation Drive, SF</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 80px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.5;">
+                <p>&copy; 2026 ASO ELITE. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const serviceData = {
+            'keyword': {
+                title: 'Keyword Mastery | ASO Elite',
+                heading: 'Keyword <span style="color: var(--neon-coral);">Mastery</span>',
+                description: 'Advanced semantic research and competitive analysis to find your app\'s "blue ocean" keywords.',
+                image: 'assets/images/keyword_mastery.png',
+                whyTitle: 'Visibility is Everything',
+                whyText: '65% of all downloads on the App Store come from organic search. If you aren\'t ranking in the top 3 for your primary keywords, you are effectively invisible. Our keyword mastery service ensures you\'re always in the spotlight.',
+                pillars: [
+                    { title: 'Discovery', text: 'Broad-spectrum harvesting of 500+ potential search terms across languages.' },
+                    { title: 'Filtering', text: 'Data-driven selection based on volume, difficulty, and relevance scoring.' },
+                    { title: 'Mapping', text: 'Strategic placement in titles, subtitles, and hidden keyword fields.' },
+                    { title: 'Iteration', text: 'Weekly rank tracking and reallocation of resources to winning terms.' }
+                ],
+                resultValue: '#48 → #3',
+                resultMetric: '+340%'
+            },
+            'visual': {
+                title: 'Visual Conversion | ASO Elite',
+                heading: 'Visual <span style="color: var(--neon-coral);">Conversion</span>',
+                description: 'High-performance screenshots and icon designs that capture attention and drive installs.',
+                image: 'assets/images/visual_conversion.png',
+                whyTitle: 'First Impressions Count',
+                whyText: 'Users decide whether to download your app in less than 3 seconds. Your visual assets are the most critical factor in that decision. We design for conversion, not just aesthetics.',
+                pillars: [
+                    { title: 'Persona Analysis', text: 'Understanding what visual triggers resonate with your target audience.' },
+                    { title: 'A/B Testing', text: 'Testing different styles, colors, and captions to find the winning combination.' },
+                    { title: 'Brand Alignment', text: 'Ensuring your store assets match your brand identity perfectly.' },
+                    { title: 'Global Adaptation', text: 'Localizing visuals for different cultures and regional preferences.' }
+                ],
+                resultValue: '12% → 28%',
+                resultMetric: '+130%'
+            },
+            'global': {
+                title: 'Global Local | ASO Elite',
+                heading: 'Global <span style="color: var(--neon-coral);">Local</span>',
+                description: 'Full-scale localization and cultural adaptation for international app store markets.',
+                image: 'assets/images/global_local.png',
+                whyTitle: 'Think Global, Act Local',
+                whyText: 'Only 30% of app store users speak English as their primary language. If you aren\'t localizing, you are missing out on 70% of the market. We help you scale globally with precision.',
+                pillars: [
+                    { title: 'Translation', text: 'Native-level translation of all metadata and store descriptions.' },
+                    { title: 'Culturalization', text: 'Adapting icons and screenshots to local cultural norms and trends.' },
+                    { title: 'Regional ASO', text: 'Specific keyword research for every territory you target.' },
+                    { title: 'Market Insights', text: 'Deep dives into local competitor landscapes across the globe.' }
+                ],
+                resultValue: '5 → 45 Countries',
+                resultMetric: '+500%'
+            },
+            'ab': {
+                title: 'A/B Experimentation | ASO Elite',
+                heading: 'A/B <span style="color: var(--neon-coral);">Experimentation</span>',
+                description: 'Rigorous testing of metadata and assets to ensure every update leads to growth.',
+                image: 'assets/images/ab_experimentation.png',
+                whyTitle: 'Data-Driven Growth',
+                whyText: 'In ASO, guessing is expensive. Experimentation is the only way to know what actually works. We run structured tests to remove the guesswork from your growth strategy.',
+                pillars: [
+                    { title: 'Hypothesis', text: 'Developing clear, testable ideas based on data and research.' },
+                    { title: 'Test Setup', text: 'Configuring Google Play Experiments or Apple Product Page Optimization.' },
+                    { title: 'Data Analysis', text: 'Interpreting results with statistical significance and confidence.' },
+                    { title: 'Implementation', text: 'Rolling out winning variants and planning the next iteration.' }
+                ],
+                resultValue: '95% Confidence',
+                resultMetric: '+45% CVR'
+            }
+        };
+
+        function updateContent() {
+            const params = new URLSearchParams(window.location.search);
+            const service = params.get('service') || 'keyword';
+            const data = serviceData[service] || serviceData['keyword'];
+
+            // Update Page Title
+            document.title = data.title;
+
+            // Update Hero
+            document.querySelector('.section-padding h1').innerHTML = data.heading;
+            document.querySelector('.section-padding p').innerText = data.description;
+            document.querySelector('.section-padding img').src = data.image;
+
+            // Update "Why" Section
+            const whySection = document.querySelectorAll('.section-padding')[1];
+            whySection.querySelector('h2').innerText = data.whyTitle;
+            whySection.querySelector('p').innerText = data.whyText;
+
+            // Update Pillars
+            const pillarCards = document.querySelectorAll('.section-padding')[2].querySelectorAll('.card');
+            data.pillars.forEach((pillar, index) => {
+                if (pillarCards[index]) {
+                    pillarCards[index].querySelector('h4').innerText = pillar.title;
+                    pillarCards[index].querySelector('p').innerText = pillar.text;
+                }
+            });
+
+            // Update Results
+            const resultCard = document.querySelectorAll('.section-padding')[3].querySelector('.card');
+            const resultItems = resultCard.querySelectorAll('strong');
+            resultItems[0].innerText = data.resultValue;
+            resultItems[1].innerText = data.resultMetric;
+        }
+
+        window.onload = updateContent;
+    </script>
 </body>
 </html>

@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -23,7 +25,7 @@
                 <a href="about.html">About</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="services.html">Services</a>
-                <a href="blog.html">Blog</a>
+
                 <a href="pricing.html">Pricing</a>
                 <a href="contact.html">Contact</a>
             </nav>
@@ -49,10 +51,10 @@
     </header>
 
     <!-- 1. Hero Page Header -->
-    <section class="section-padding" style="background: var(--bg-color); transition: var(--transition); text-align: center; padding-top: 150px;">
+    <section class="section-padding" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/about-hero.png'); background-size: cover; background-position: center bottom; transition: var(--transition); text-align: center; padding-top: 180px; padding-bottom: 200px; color: white;">
         <div class="container">
-            <h1 style="font-size: 4rem; margin-bottom: 20px;">The Data Minds Behind the <span style="color: var(--neon-coral);">Rankings</span></h1>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.8;">We are a boutique ASO agency dedicated to scaling mobile applications through rigorous data analysis and creative excellence.</p>
+            <h1 style="font-size: 4rem; margin-bottom: 20px; color: white;">The Data Minds Behind the <span style="color: var(--neon-coral);">Rankings</span></h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.9; color: white;">We are a boutique ASO agency dedicated to scaling mobile applications through rigorous data analysis and creative excellence.</p>
         </div>
     </section>
 
@@ -86,26 +88,34 @@
                 <h2 style="font-size: 2.5rem;">Core Principles</h2>
                 <p>What makes us different from generic agencies.</p>
             </div>
-            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 30px;">
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">📊</div>
-                    <h3>Data Over Hype</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">We rely on hard numbers, not market trends or buzzwords.</p>
+            <div class="portfolio-grid">
+                <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                    <img src="assets/images/data_principle.png" alt="Data" style="width: 100%; height: 180px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3>Data Over Hype</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">We rely on hard numbers, not market trends or buzzwords.</p>
+                    </div>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">🎨</div>
-                    <h3>Creative Edge</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">Visuals designed to convert, backed by psychological research.</p>
+                <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                    <img src="assets/images/creative_principle.png" alt="Creative" style="width: 100%; height: 180px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3>Creative Edge</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Visuals designed to convert, backed by psychological research.</p>
+                    </div>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">🤝</div>
-                    <h3>Radical Clarity</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">Transparent reporting and direct communication with specialists.</p>
+                <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                    <img src="assets/images/clarity_principle.png" alt="Clarity" style="width: 100%; height: 180px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3>Radical Clarity</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">Transparent reporting and direct communication with specialists.</p>
+                    </div>
                 </div>
-                <div class="card" style="text-align: center;">
-                    <div style="font-size: 2rem; margin-bottom: 15px;">⚡</div>
-                    <h3>Rapid Iteration</h3>
-                    <p style="font-size: 0.9rem; opacity: 0.7;">The store changes fast, so do we. Speed is our superpower.</p>
+                <div class="card" style="text-align: center; padding: 0; overflow: hidden;">
+                    <img src="assets/images/speed_principle.png" alt="Speed" style="width: 100%; height: 180px; object-fit: cover;">
+                    <div style="padding: 25px;">
+                        <h3>Rapid Iteration</h3>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">The store changes fast, so do we. Speed is our superpower.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,10 +153,19 @@
 
     <footer class="section-padding" style="background: #111; color: white;">
         <div class="container">
-            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 40px;">
+            <div class="grid" style="grid-template-columns: 1.2fr 0.8fr 0.8fr 1.2fr; gap: 40px;">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">ASO ELITE</a>
-                    <p style="opacity: 0.7;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                    <a href="index.html" class="logo flex" style="align-items: center; gap: 10px; -webkit-text-fill-color: initial; background: none; margin-bottom: 20px;">
+                        <img src="assets/images/logo.png" alt="ASO Elite Logo" style="height: 35px; border-radius: 5px;">
+                        <span style="background: var(--peach-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">ASO ELITE</span>
+                    </a>
+                    <p style="opacity: 0.7; max-width: 300px;">Leading freelance ASO specialist helping brands grow their mobile presence since 2018.</p>
+                    <div class="social-links flex" style="margin-top: 25px;">
+                        <a href="#" class="social-link" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="social-link" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
                 <div class="footer-col">
                     <h3>Quick Links</h3>
@@ -154,7 +173,7 @@
                         <li><a href="about.html" style="opacity: 0.7;">About Us</a></li>
                         <li><a href="portfolio.html" style="opacity: 0.7;">Portfolio</a></li>
                         <li><a href="services.html" style="opacity: 0.7;">Services</a></li>
-                        <li><a href="blog.html" style="opacity: 0.7;">Resources</a></li>
+
                         <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
                     </ul>
                 </div>
@@ -168,13 +187,21 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Connect</h3>
-                    <div class="social-links flex" style="gap: 15px; margin-top: 20px;">
-                        <a href="#" style="font-size: 20px;">FB</a>
-                        <a href="#" style="font-size: 20px;">IG</a>
-                        <a href="#" style="font-size: 20px;">LI</a>
-                        <a href="#" style="font-size: 20px;">TW</a>
-                    </div>
+                    <h3>Contact Us</h3>
+                    <ul style="margin-top: 20px;">
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-envelope" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>growth@asoelite.com</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; margin-bottom: 15px; opacity: 0.7;">
+                            <i class="fas fa-phone" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li style="display: flex; gap: 10px; opacity: 0.7;">
+                            <i class="fas fa-location-dot" style="color: var(--primary-purple); margin-top: 5px;"></i>
+                            <span>100 Innovation Drive, SF</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom" style="margin-top: 80px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; opacity: 0.5;">
